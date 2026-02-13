@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniversário do Francisco</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="overlay">
+            <h1>Aniversário do Chico 🎉</h1>
+            <p>Uma tarde especial para comemorar juntos</p>
+            <a href="#confirmacao" class="btn">Confirmar Presença</a>
+            <div class="contador">
+                <div><span id="dias"></span><p>Dias</p></div>
+                <div><span id="horas"></span><p>Horas</p></div>
+                <div><span id="minutos"></span><p>Min</p></div>
+                <div><span id="segundos"></span><p>Seg</p></div>
+            </div>
+            <a href="evento.ics" download class="btn-agenda">
+                Adicionar na Agenda
+            </a>
+        </div>
+    </header>
+
+    <section class="evento reveal">
+    <h2>Detalhes do Evento</h2>
+
+    <div class="cards-evento">
+
+        <div class="card">
+            <h3>📅 Data</h3>
+            <p>14 de Março de 2026</p>
+        </div>
+
+        <div class="card">
+            <h3>⏰ Horário</h3>
+            <p>12:00</p>
+            <p>Chegue no horário. O local é bem lotado para estacionar</p>
+        </div>
+
+        <div class="card">
+            <h3>📍 Local</h3>
+            <p>CTN - Centro de Tradições Nordestinas</p>
+            <p>Família Kariri - Box 5</p>
+        </div>
+
+        <div class="card">
+        <h3>🌐 Site do Local</h3>
+        <p>Visite o site oficial para mais informações</p>
+
+        <a href="https://www.familiakariri.com.br/" target="_blank" class="btn-site">
+            Acessar Site
+        </a>
+        </div>
+
+    </div>
+    </section>
+
+
+    <section class="galeria reveal">
+    <h2>Momentos Especiais</h2>
+
+    <div class="carousel">
+        <button class="prev" onclick="mudarSlide(-1)">❮</button>
+
+        <div class="carousel-track">
+            <img src="images/IMG_2057.JPEG">
+            <img src="images/IMG_2358.JPEG">
+            <img src="images/IMG_2504.JPEG">
+            <img src="images/IMG_2918.JPEG">
+        </div>
+
+        <button class="next" onclick="mudarSlide(1)">❯</button>
+    </div>
+    </section>
+
+    <section class="localizacao reveal">
+        <h2>Como Chegar</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.6193879123043!2d-46.68138902479015!3d-23.510214959714943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef8198d18a321%3A0x296eee613d7664c1!2sCTN%20-%20Centro%20de%20Tradi%C3%A7%C3%B5es%20Nordestinas!5e0!3m2!1spt-BR!2sbr!4v1771014862455!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section id="confirmacao" class="confirmacao reveal">
+        <h2>Confirme sua Presença</h2>
+        <button onclick="confirmar()">Confirmar Agora</button>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
